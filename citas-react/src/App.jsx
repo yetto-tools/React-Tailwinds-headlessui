@@ -35,13 +35,13 @@ function App() {
 
   return (
     <>
-      <div className='container mx-auto pb-20'>
-          <div className="grid grid-cols md:grid-cols lg:grid-cols">
-            <div className="flex justify-center"><Header /></div>  
+      <div className='mx-8 pb-20'>
+          <div className='grid grid-cols sm:grid-cols lg:grid-cols'>
+            <div className='flex justify-center'><Header /></div>  
           </div>
-          <div className="lg:inline-flex w-full">
-          {/* <div className="grid grid-cols sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2"> */}
-            <div className="lg:w-1/2">
+          <div className='md:flex justify-center  lg:inline-flex w-full'>
+          {/* <div className='grid grid-cols sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2'> */}
+            <div className='w-4/5 mx-auto md:w-4/6  lg:w-1/2'>
               <Form 
                 patient={patient}
                 setPatient={setPatient}
@@ -49,7 +49,7 @@ function App() {
                 setChangePatient={setChangePatient}
               />
             </div>
-            <div className="lg:w-full">
+            <div className='w-full'>
               <ListPatients 
                 patient={patient}
                 setChangePatient={setChangePatient}

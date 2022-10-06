@@ -107,20 +107,9 @@ export const Form = ({patient, setPatient, changePatient, setChangePatient}) => 
     <div className="w-full sm:w-5/4  md:w-full">
       <div className="">
         <form onSubmit={handleSubmit} action="" className="bg-white shadow-2xl rounded-lg pb-5 px-5 mx-5 my-5">
-          <h2 className="font-black text-center pt-1 mb-4">
-            <p className="text-lg mt-5 ml-2">
-              Añadir y  <small className="text-cyan-500">Administrar</small>
-            </p>
-          </h2>
-          <div className="row">
-            <span className='flex justify-end'>
-              <button type='button'
-                className='bg-red-200 border-2 text-white font-bold rounded
-                  hover:bg-red-500
-                  hover:opacity-100
-                  hover:text-white
-                  transition-all
-                  '
+          <div className='flex justify-end'>
+              <button title="Limpiar Campos" type='button'
+                className='mt-4 text-red-400 font-bold rounded hover:bg-red-500 hover:text-white transition-all'
                 onClick={handleClean}
               >
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -128,14 +117,20 @@ export const Form = ({patient, setPatient, changePatient, setChangePatient}) => 
                 </svg>
 
               </button>
+          </div>
+          <h2 className="font-black text-center mb-4">
+            <span className="text-lg mt-1 ml-2">
+              Añadir y  <small className="text-cyan-500">Administrar</small>
             </span>
+          </h2>
+          <div className="row">
             <div className="md:w-auto mb-2">
               <label htmlFor="name-pet" className="block font-bold text-xs uppercase">
                 Mascota: {petName}
               </label>
-              <input id="name-pet" name="name-pet" type="text"
+              <input id="name-pet" name="name-pet" type="text" 
                 placeholder="Nombre de la Mascota"
-                className="text-xs border-2 w-full p-2 rounded-md bg-cyan-50 hover:bg-cyan-100 active:bg-cyan-100 focus:outline-none focus:ring focus:ring-cyan-300 transition-all needs-validation"
+                className="text-xs border-2 w-full p-2 rounded-md active:bg-sky-50 focus:outline-none focus:ring focus:ring-sky-300 transition-all needs-validation"
                 value = {petName}
                 onChange={(e)=>{ setPetName(e.target.value);}}
               />
@@ -145,9 +140,9 @@ export const Form = ({patient, setPatient, changePatient, setChangePatient}) => 
               <label htmlFor="owner" className="block font-bold text-xs uppercase">
                 Propietario
               </label>
-              <input id="owner" name="owner" type="text"
+              <input id="owner" name="owner" type="text" 
                 placeholder="Nombre del Propietario"
-                className="text-xs border-2 w-full p-2 mt-1 rounded-md bg-cyan-50 hover:bg-cyan-100 active:bg-cyan-100 focus:outline-none focus:ring focus:ring-cyan-300 transition-all needs-validation"
+                className="text-xs border-2 w-full p-2 rounded-md active:bg-sky-50 focus:outline-none focus:ring focus:ring-sky-300 transition-all needs-validation"
                 value = {petOwnerName}
                 onChange={(e)=>{setOwnerName(e.target.value);}}
               />
@@ -157,9 +152,9 @@ export const Form = ({patient, setPatient, changePatient, setChangePatient}) => 
               <label htmlFor="owner-email" className="block font-bold text-xs uppercase">
                 Correo
               </label>
-              <input id="owner-email" name="owner-email" type="email"
+              <input id="owner-email" name="owner-email" type="email" 
                 placeholder="Correo Electronico"
-                className="text-xs border-2 w-full p-2 mt-1 rounded-md bg-cyan-50 hover:bg-cyan-100 active:bg-cyan-100 focus:outline-none focus:ring focus:ring-cyan-300 transition-all needs-validation"
+                className="text-xs border-2 w-full p-2 rounded-md active:bg-sky-50 focus:outline-none focus:ring focus:ring-sky-300 transition-all needs-validation"
                 value = {petOwnerEmail}
                 onChange={(e)=>{setOwnerEmail(e.target.value);}}
               />
@@ -169,9 +164,9 @@ export const Form = ({patient, setPatient, changePatient, setChangePatient}) => 
               <label htmlFor="numbre-phone" className="block font-bold text-xs uppercase">
                 Telefono
               </label>
-              <input id="numbre-phone" name="number-phone" type="phone"
+              <input id="numbre-phone" name="number-phone" type="phone" 
                 placeholder="Numero de Telefono"
-                className="text-xs border-2 w-full p-2 mt-1 rounded-md bg-cyan-50 hover:bg-cyan-100 active:bg-cyan-100 focus:outline-none focus:ring focus:ring-cyan-300 transition-all needs-validation"
+                className="text-xs border-2 w-full p-2 rounded-md active:bg-sky-50 focus:outline-none focus:ring focus:ring-sky-300 transition-all needs-validation"
                 value = {petOwnerPhone}
                 onChange={(e)=>{ setOwnerPhone(e.target.value);}}
               />
@@ -181,7 +176,7 @@ export const Form = ({patient, setPatient, changePatient, setChangePatient}) => 
                 Direccion
               </label>
               <textarea id="address" name="address"
-                className="text-xs border-2 w-full p-2 mt-1 rounded-md bg-cyan-50 hover:bg-cyan-100 active:bg-cyan-100 focus:outline-none focus:ring focus:ring-cyan-300 transition-all needs-validation"
+                className="text-xs border-2 w-full p-2 rounded-md active:bg-sky-50 focus:outline-none focus:ring focus:ring-sky-300 transition-all needs-validation"
                 value={petOwnerAddress}
                 onChange={(e)=>{setOwnerAddress(e.target.value);}}
               />
@@ -191,7 +186,7 @@ export const Form = ({patient, setPatient, changePatient, setChangePatient}) => 
                 Fecha Alta
               </label>
               <input id="date-discharged" name="date-discharged" type="date"
-                className="text-xs border-2 w-full p-2 mt-1 rounded-md bg-cyan-50 hover:bg-cyan-100 active:bg-cyan-100 focus:outline-none focus:ring focus:ring-cyan-300 transition-all needs-validation"
+                className="text-xs border-2 w-full p-2 rounded-md active:bg-sky-50 focus:outline-none focus:ring focus:ring-sky-300 transition-all needs-validation"
                 value={petDateDischarged}
                 onInput={(e)=>{setDateDischarged(e.target.value);}}
               />
@@ -201,22 +196,15 @@ export const Form = ({patient, setPatient, changePatient, setChangePatient}) => 
                 Sintomas
               </label>
               <textarea id="symptoms" name="symptoms"
-                className="text-xs border-2 w-full p-2 mt-1 rounded-md bg-cyan-50 hover:bg-cyan-100 active:bg-cyan-100 focus:outline-none focus:ring focus:ring-cyan-300 transition-all needs-validation"
+                className="text-xs border-2 w-full p-2 rounded-md active:bg-sky-50 focus:outline-none focus:ring focus:ring-sky-300 transition-all needs-validation"
                 value={SymptomsPet}
                 onChange={(e)=>{setSymptomsPet(e.target.value);}}
               />
 
             </div>
             <div className="md:w-auto mb-1">
-              <button id="symptoms" name="symptoms" type="submit"
-                className="text-xs border-2 w-full p-2 mt-1 text-white font-bold rounded-md
-                bg-emerald-700
-                hover:bg-emerald-600
-                active:bg-emerald-100
-                focus:outline-none
-                focus:ring
-                focus:ring-emerald-300
-                cursor-pinter transition-all needs-validation"
+              <button id="symptoms" name="symptoms" type="submit" title="Agregar Nuevo Elemento a la Lista"
+                className={changePatient.id ? 'text-xs border-2 w-full p-2 mt-1 text-white font-bold rounded-md bg-sky-700 hover:bg-sky-600 active:bg-sky-100 focus:outline-none focus:ring focus:ring-sky-300 cursor-pinter transition-all needs-validation' : 'text-xs border-2 w-full p-2 mt-1 text-white font-bold rounded-md bg-emerald-700 hover:bg-emerald-600 active:bg-emerald-100 focus:outline-none focus:ring focus:ring-emerald-300 cursor-pinter transition-all needs-validation' }
                 onClick={(e)=>{console.log('enviando')}}
               >{changePatient.id ? "Editar" :"Agregar"}</button>
             </div>
